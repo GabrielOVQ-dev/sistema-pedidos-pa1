@@ -66,27 +66,40 @@ public class Pedido {
   }
 
   public Long getId() {
+
     return id;
   }
 
   public String getCliente() {
+
     return cliente;
   }
 
   public Producto getProducto() {
+
     return producto;
   }
 
   public int getCantidad() {
+
     return cantidad;
   }
 
   public BigDecimal getTotal() {
+
     return total;
   }
 
   public LocalDateTime getFecha() {
+
     return fecha;
+  }
+
+  public void actualizar(String cliente, Producto producto, int cantidad, BigDecimal total) {
+    this.cliente = cliente;
+    this.producto = producto;
+    this.cantidad = cantidad;
+    this.total = total;
   }
 
 }

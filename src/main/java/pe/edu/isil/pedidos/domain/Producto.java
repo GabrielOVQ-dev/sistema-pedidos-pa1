@@ -48,18 +48,22 @@ public class Producto {
   }
 
   public Long getId() {
+
     return id;
   }
 
   public String getNombre() {
+
     return nombre;
   }
 
   public BigDecimal getPrecio() {
+
     return precio;
   }
 
   public int getStock() {
+
     return stock;
   }
 
@@ -73,6 +77,14 @@ public class Producto {
     }
 
     stock -= cantidad;
+  }
+
+  public void reponerStock(int cantidad) {
+    if (cantidad <= 0) {
+      throw new IllegalArgumentException("La cantidad debe ser mayor que cero");
+    }
+
+    stock += cantidad;
   }
 
 }
